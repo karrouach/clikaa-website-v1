@@ -1,0 +1,78 @@
+"use client";
+
+import { forwardRef, TextareaHTMLAttributes, useState } from "react";
+import { motion } from "framer-motion";
+import { cn } from "@/lib/utils";
+
+interface TextareaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
+  label?: string;
+  error?: string;
+}
+
+export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
+  ({ label, error, className, id, ...props }, ref) => {
+    const [isFocused, setIsFocused] = useState(false);
+    const [hasValue, setHasValue] = useState(false);
+
+    const textareaId = id || label?.toLowerCase().replace(/\s+/g, "-");
+
+    return (
+      <div className="relative">
+        {label && (
+          <motion.label
+            htmlFor={textareaId}
+            className={cn(
+              "absolute left-0 transition-all duration-300 pointer-events-none",
+              isFocused || hasValue
+                ? "text-xs text-muted -top-5"
+                : "text-base text-muted top-3"
+            )}
+            animate={{
+              top: isFocused || hasValue ? -20 : 12,
+              fontSize: isFocused || hasValue ? "12px" : "16px",
+            }}
+            transition={{ duration: 0.2 }}
+          >
+            {label}
+          </motion.label>
+        )}
+        <textarea
+          ref={ref}
+          id={textareaId}
+          className={cn(
+            "w-full bg-transparent border-b-2 border-border py-3 text-foreground",
+            "outline-none transition-colors duration-300 resize-none",
+            "placeholder:text-transparent min-h-[120px]",
+            "focus:border-foreground",
+            error && "border-red-500",
+            className
+          )}
+          onFocus={() => setIsFocused(true)}
+          onBlur={(e) => {
+            setIsFocused(false);
+            setHasValue(e.target.value !== "");
+          }}
+          onChange={(e) => setHasValue(e.target.value !== "")}
+          {...props}
+        />
+        <motion.div
+          className="absolute bottom-0 left-0 h-0.5 bg-foreground"
+          initial={{ width: "0%" }}
+          animate={{ width: isFocused ? "100%" : "0%" }}
+          transition={{ duration: 0.3 }}
+        />
+        {error && (
+          <motion.p
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="mt-2 text-sm text-red-500"
+          >
+            {error}
+          </motion.p>
+        )}
+      </div>
+    );
+  }
+);
+
+Textarea.displayName = "Textarea";
