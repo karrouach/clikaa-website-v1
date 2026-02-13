@@ -9,21 +9,22 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "#0A0A0A",
-        foreground: "#FAFAFA",
-        muted: "#A1A1A1",
-        border: "#262626",
-        card: "#141414",
-        accent: "#FFFFFF",
+        background: "#FFFFFF",
+        foreground: "#111111",
+        muted: "#666666",
+        border: "#E5E5E5",
+        card: "#F6F4EF",
+        accent: "#091CCA",
       },
       fontFamily: {
-        sans: ["var(--font-jakarta)", "system-ui", "sans-serif"],
+        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
       },
       fontSize: {
         "display-xl": "clamp(3rem, 10vw, 8rem)",
         "display-lg": "clamp(2.5rem, 8vw, 6rem)",
         "display-md": "clamp(2rem, 6vw, 4rem)",
         "display-sm": "clamp(1.5rem, 4vw, 2.5rem)",
+        "body-lg": "1.5rem",
       },
       spacing: {
         section: "clamp(6rem, 15vh, 12rem)",
@@ -34,6 +35,7 @@ const config: Config = {
       },
       transitionTimingFunction: {
         smooth: "cubic-bezier(0.22, 1, 0.36, 1)",
+        reveal: "cubic-bezier(0.76, 0, 0.24, 1)",
       },
       keyframes: {
         "fade-in": {
@@ -51,7 +53,7 @@ const config: Config = {
       },
       animation: {
         "fade-in": "fade-in 0.6s ease-smooth forwards",
-        "slide-up": "slide-up 0.8s ease-smooth forwards",
+        "slide-up": "slide-up 0.8s ease-reveal forwards",
         marquee: "marquee 30s linear infinite",
       },
     },

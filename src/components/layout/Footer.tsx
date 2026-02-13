@@ -34,7 +34,7 @@ export function Footer() {
       <Container className="py-16 lg:py-24">
         <div className="grid gap-12 lg:grid-cols-12">
           <RevealOnScroll className="lg:col-span-5">
-            <Logo animated={false} className="text-3xl" />
+            <Logo />
             <p className="mt-6 max-w-sm text-muted">
               {SITE_CONFIG.description}. We craft digital experiences that
               captivate, engage, and deliver results.

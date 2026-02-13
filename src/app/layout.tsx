@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { jakarta } from "@/lib/fonts";
+import { inter } from "@/lib/fonts";
 import { LenisProvider } from "@/providers/LenisProvider";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -55,7 +55,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={jakarta.variable}>
+    <html lang="en" className={inter.variable}>
       <body className="bg-background text-foreground antialiased">
         <LenisProvider>
           <Cursor />

@@ -6,7 +6,7 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { smoothEasing } from "@/lib/animations";
 
-type ButtonVariant = "primary" | "secondary" | "outline" | "ghost";
+type ButtonVariant = "primary" | "secondary" | "outline" | "ghost" | "accent";
 type ButtonSize = "sm" | "md" | "lg";
 
 interface ButtonBaseProps {
@@ -28,6 +28,8 @@ const variants = {
   outline:
     "bg-transparent text-foreground border border-foreground hover:bg-foreground hover:text-background",
   ghost: "bg-transparent text-foreground hover:bg-foreground/10",
+  accent:
+    "bg-accent text-white hover:bg-accent/90 border border-accent",
 };
 
 const sizes = {
