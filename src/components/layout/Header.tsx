@@ -1,18 +1,25 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import { motion, useMotionValue, useTransform, AnimatePresence } from "framer-motion";
+import { motion, useMotionValue, useTransform } from "framer-motion";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu } from "lucide-react";
 import { Logo } from "@/components/shared/Logo";
-import { Navigation } from "./Navigation";
 import { MobileMenu } from "./MobileMenu";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
 
+const NAV_LINKS = [
+  { label: "Services", href: "/services" },
+  { label: "Work", href: "/projects" },
+];
+
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
 
   const scrollY = useMotionValue(0);
   const headerOpacity = useTransform(scrollY, [0, 100], [0, 1]);
@@ -51,16 +58,37 @@ export function Header() {
           <div className="flex items-center justify-between">
             <Logo />
 
-            <Navigation />
+            <nav className="hidden lg:flex items-center gap-8">
+              {NAV_LINKS.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={cn(
+                    "relative text-sm font-medium transition-colors",
+                    pathname === link.href
+                      ? "text-foreground"
+                      : "text-muted hover:text-foreground"
+                  )}
+                >
+                  {link.label}
+                  {pathname === link.href && (
+                    <motion.span
+                      layoutId="activeNav"
+                      className="absolute -bottom-1 left-0 right-0 h-px bg-foreground"
+                      transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                    />
+                  )}
+                </Link>
+              ))}
+            </nav>
 
             <div className="flex items-center gap-4">
               <Button
                 href="/contact"
-                variant="outline"
                 size="sm"
                 className="hidden lg:inline-flex"
               >
-                Get in Touch
+                Start a Project
               </Button>
 
               <button

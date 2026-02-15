@@ -1,27 +1,31 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Logo } from "@/components/shared/Logo";
 import { SocialLinks } from "@/components/shared/SocialLinks";
 import { RevealOnScroll } from "@/components/animations/RevealOnScroll";
-import { NAVIGATION, SITE_CONFIG } from "@/lib/constants";
-import { cn } from "@/lib/utils";
+import { SITE_CONFIG } from "@/lib/constants";
 
 const footerLinks = [
   {
-    title: "Navigation",
-    links: NAVIGATION,
+    title: "Pages",
+    links: [
+      { label: "Services", href: "/services" },
+      { label: "Work", href: "/projects" },
+      { label: "About", href: "/about" },
+      { label: "Blog", href: "/blog" },
+      { label: "Contact", href: "/contact" },
+    ],
   },
   {
     title: "Services",
     links: [
-      { label: "Web Design", href: "/services#web-design" },
-      { label: "Branding", href: "/services#branding" },
-      { label: "Development", href: "/services#development" },
-      { label: "Strategy", href: "/services#strategy" },
+      { label: "Pitch Decks", href: "/services" },
+      { label: "Brand Identity", href: "/services" },
+      { label: "Digital Products", href: "/services" },
+      { label: "Design Teams", href: "/services" },
     ],
   },
 ];
@@ -30,14 +34,13 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-border bg-card">
+    <footer className="border-t border-border">
       <Container className="py-16 lg:py-24">
         <div className="grid gap-12 lg:grid-cols-12">
           <RevealOnScroll className="lg:col-span-5">
             <Logo />
             <p className="mt-6 max-w-sm text-muted">
-              {SITE_CONFIG.description}. We craft digital experiences that
-              captivate, engage, and deliver results.
+              We build the visual narratives that turn &ldquo;maybe&rdquo; into &ldquo;where do I sign?&rdquo;
             </p>
             <div className="mt-8">
               <SocialLinks />
@@ -52,7 +55,7 @@ export function Footer() {
                 </h3>
                 <ul className="space-y-3">
                   {group.links.map((link) => (
-                    <li key={link.href}>
+                    <li key={link.label}>
                       <Link
                         href={link.href}
                         className="group inline-flex items-center gap-1 text-foreground transition-colors hover:text-muted"
@@ -72,21 +75,12 @@ export function Footer() {
               Contact
             </h3>
             <address className="not-italic">
-              <p className="text-foreground">{SITE_CONFIG.address}</p>
               <p className="mt-4">
                 <a
                   href={`mailto:${SITE_CONFIG.email}`}
-                  className="text-foreground transition-colors hover:text-muted"
+                  className="text-foreground font-medium transition-colors hover:text-accent"
                 >
                   {SITE_CONFIG.email}
-                </a>
-              </p>
-              <p className="mt-2">
-                <a
-                  href={`tel:${SITE_CONFIG.phone.replace(/\s/g, "")}`}
-                  className="text-foreground transition-colors hover:text-muted"
-                >
-                  {SITE_CONFIG.phone}
                 </a>
               </p>
             </address>
@@ -95,16 +89,11 @@ export function Footer() {
 
         <RevealOnScroll className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-border pt-8 sm:flex-row">
           <p className="text-sm text-muted">
+            Made with caffeine and pixels by Clikaa.
+          </p>
+          <p className="text-sm text-muted">
             &copy; {currentYear} {SITE_CONFIG.name}. All rights reserved.
           </p>
-          <div className="flex gap-6 text-sm text-muted">
-            <Link href="/privacy" className="transition-colors hover:text-foreground">
-              Privacy Policy
-            </Link>
-            <Link href="/terms" className="transition-colors hover:text-foreground">
-              Terms of Service
-            </Link>
-          </div>
         </RevealOnScroll>
       </Container>
     </footer>

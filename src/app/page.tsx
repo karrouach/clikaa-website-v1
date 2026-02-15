@@ -1,8 +1,10 @@
 import {
   Hero,
-  FeaturedProjects,
-  ServicesPreview,
-  Testimonials,
+  LogoCloud,
+  PainPoint,
+  ServicePillars,
+  SelectedWorks,
+  Process,
   CTASection,
 } from "@/components/sections/home";
 
@@ -10,9 +12,11 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <FeaturedProjects />
-      <ServicesPreview />
-      <Testimonials />
+      <LogoCloud />
+      <PainPoint />
+      <ServicePillars />
+      <SelectedWorks />
+      <Process />
       <CTASection />
     </>
   );
