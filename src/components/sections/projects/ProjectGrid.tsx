@@ -25,7 +25,7 @@ export function ProjectGrid() {
             </span>
           </TextReveal>
           <TextReveal delay={0.1}>
-            <h1 className="mt-4 text-display-lg font-bold">Projects</h1>
+            <h1 className="mt-2 text-display-lg font-bold leading-tight">Projects</h1>
           </TextReveal>
         </div>
 

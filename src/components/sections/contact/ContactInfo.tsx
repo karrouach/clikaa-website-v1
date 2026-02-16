@@ -15,7 +15,7 @@ export function ContactInfo() {
         </span>
       </TextReveal>
       <TextReveal delay={0.1}>
-        <h1 className="mt-4 text-display-md font-bold">
+        <h1 className="mt-2 text-display-md font-bold leading-tight">
           Let&apos;s start a conversation
         </h1>
       </TextReveal>

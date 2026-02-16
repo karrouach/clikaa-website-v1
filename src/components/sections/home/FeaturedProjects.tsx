@@ -26,7 +26,7 @@ export function FeaturedProjects() {
               </span>
             </TextReveal>
             <TextReveal delay={0.1}>
-              <h2 className="mt-4 text-display-md font-bold">
+              <h2 className="mt-2 text-display-lg font-bold leading-tight">
                 Featured Projects
               </h2>
             </TextReveal>

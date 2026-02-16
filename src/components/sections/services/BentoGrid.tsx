@@ -29,7 +29,7 @@ export function BentoGrid() {
             </span>
           </TextReveal>
           <TextReveal delay={0.1}>
-            <h1 className="mt-4 text-display-lg font-bold">Our Services</h1>
+            <h1 className="mt-2 text-display-lg font-bold leading-tight">Our Services</h1>
           </TextReveal>
           <RevealOnScroll delay={0.2} className="mt-6 max-w-2xl">
             <p className="text-xl text-muted">

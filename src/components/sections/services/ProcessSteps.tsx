@@ -18,7 +18,7 @@ export function ProcessSteps() {
             </span>
           </TextReveal>
           <TextReveal delay={0.1}>
-            <h2 className="mt-4 text-display-md font-bold">Our Process</h2>
+            <h2 className="mt-2 text-display-md font-bold leading-tight">Our Process</h2>
           </TextReveal>
         </div>
 

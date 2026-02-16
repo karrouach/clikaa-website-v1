@@ -23,7 +23,7 @@ export function BlogGrid() {
             </span>
           </TextReveal>
           <TextReveal delay={0.1}>
-            <h1 className="mt-4 text-display-lg font-bold">Blog</h1>
+            <h1 className="mt-2 text-display-lg font-bold leading-tight">Blog</h1>
           </TextReveal>
         </div>
 

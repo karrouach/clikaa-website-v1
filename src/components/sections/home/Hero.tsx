@@ -46,14 +46,14 @@ export function Hero() {
           </RevealOnScroll>
 
           <RevealOnScroll delay={0.7} className="mt-10 flex flex-wrap gap-4">
-            <MagneticButton href="/projects">
-              View Our Work
+            <MagneticButton href="/contact">
+              Book a Strategy Call
             </MagneticButton>
             <MagneticButton
-              href="/contact"
+              href="/projects"
               className="bg-transparent text-foreground border border-foreground hover:bg-foreground hover:text-background"
             >
-              Get in Touch
+              View Case Studies
             </MagneticButton>
           </RevealOnScroll>
         </div>

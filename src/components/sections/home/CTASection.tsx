@@ -16,20 +16,19 @@ export function CTASection() {
             </span>
           </TextReveal>
           <TextReveal delay={0.1}>
-            <h2 className="mt-6 text-display-lg font-bold">
-              Have a project in mind?
+            <h2 className="mt-2 text-display-lg font-bold leading-tight">
+              Building something ambitious? So are we.
             </h2>
           </TextReveal>
           <RevealOnScroll delay={0.2}>
-            <p className="mx-auto mt-6 max-w-2xl text-lg text-muted">
-              We&apos;re always excited to work on new challenges. Whether you have a
-              clear vision or just a spark of an idea, we&apos;d love to hear from
-              you and explore how we can bring it to life.
+            <p className="mx-auto mt-4 max-w-2xl text-lg text-muted">
+              We partner with founders who are moving fast and need design that
+              moves with them.
             </p>
           </RevealOnScroll>
-          <RevealOnScroll delay={0.3} className="mt-10">
+          <RevealOnScroll delay={0.3} className="mt-8">
             <MagneticButton href="/contact" scale={1.08}>
-              Start a Project
+              Book a Strategy Call
             </MagneticButton>
           </RevealOnScroll>
         </div>

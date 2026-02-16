@@ -22,14 +22,14 @@ export function Testimonials() {
             </span>
           </TextReveal>
           <TextReveal delay={0.1}>
-            <h2 className="mt-4 text-display-md font-bold">
+            <h2 className="mt-2 text-display-lg font-bold leading-tight">
               What Our Clients Say
             </h2>
           </TextReveal>
         </div>
       </Container>
 
-      <Marquee speed="slow" pauseOnHover>
+      <Marquee speed="slow" pauseOnHover className="gap-6">
         {testimonials.map((testimonial) => (
           <TestimonialCard key={testimonial.id} testimonial={testimonial} />
         ))}
@@ -45,7 +45,7 @@ interface TestimonialCardProps {
 function TestimonialCard({ testimonial }: TestimonialCardProps) {
   return (
     <motion.div
-      className="w-[400px] shrink-0 rounded-2xl border border-border bg-card p-8"
+      className="w-[350px] shrink-0 rounded-2xl border border-border bg-card p-6"
       whileHover={{ y: -4 }}
       transition={{ duration: 0.3, ease: smoothEasing }}
     >

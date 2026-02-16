@@ -14,7 +14,7 @@ const config: Config = {
         muted: "#666666",
         border: "#E5E5E5",
         card: "#F6F4EF",
-        accent: "#091CCA",
+        accent: "#111111",
       },
       fontFamily: {
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],

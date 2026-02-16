@@ -17,6 +17,32 @@ export const projects: Project[] = [
     ],
     tags: ["UI/UX", "Development", "Branding"],
     link: "https://novafinancial.com",
+    caseStudy: {
+      challenge:
+        "Nova Financial had outgrown their legacy platform. Users were dropping off during onboarding, and the dated interface was undermining trust with institutional investors. They needed a complete digital overhaul that communicated security and sophistication without sacrificing usability.",
+      approach:
+        "We started with a deep discovery phase — interviewing stakeholders, mapping user journeys, and auditing the competitive landscape. From there, we designed a modular system that scales across their product suite, with a focus on clarity, speed, and trust signals at every touchpoint.",
+      sections: [
+        {
+          title: "Brand Identity",
+          body: "We redefined Nova's visual language from the ground up. A restrained color palette built on deep navy and warm neutrals conveys stability, while custom iconography and refined typography bring a modern edge. Every element was designed to reinforce credibility at a glance.",
+        },
+        {
+          title: "Platform Redesign",
+          body: "The new platform prioritizes progressive disclosure — surfacing the right information at the right time. We simplified the onboarding flow from 12 steps to 4, introduced contextual tooltips, and designed a dashboard that adapts to each user's role and activity patterns.",
+        },
+        {
+          title: "Design System",
+          body: "To ensure consistency at scale, we built a comprehensive design system with over 120 components. This gives Nova's internal team the tools to ship new features quickly without compromising on quality or brand coherence.",
+        },
+      ],
+      results: [
+        "68% faster onboarding",
+        "3.2x conversion increase",
+        "40% reduction in support tickets",
+        "$2.4M Series B raised post-launch",
+      ],
+    },
   },
   {
     id: "2",
@@ -33,6 +59,28 @@ export const projects: Project[] = [
       "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1200&h=800&fit=crop",
     ],
     tags: ["Branding", "E-commerce", "Photography"],
+    caseStudy: {
+      challenge:
+        "Artisan Studio's physical showrooms were renowned for their immersive experience, but their online presence told a different story. Their e-commerce site felt generic and failed to convey the craftsmanship behind each piece. They were losing high-intent buyers to competitors with stronger digital storytelling.",
+      approach:
+        "We treated every product page like a gallery exhibit. Through close collaboration with their artisans, we developed a visual system that highlights materials, process, and provenance — turning browsers into buyers who understand the value behind every piece.",
+      sections: [
+        {
+          title: "Visual Storytelling",
+          body: "Each product is presented through a cinematic sequence — from raw material to finished piece. We art-directed new photography that captures texture, scale, and detail in ways that make you want to reach through the screen.",
+        },
+        {
+          title: "E-commerce Experience",
+          body: "The storefront blends editorial content with commerce seamlessly. Curated collections, room visualizers, and a bespoke checkout flow reduce friction while maintaining the premium feel their customers expect.",
+        },
+      ],
+      results: [
+        "142% increase in average order value",
+        "2.8x online revenue growth",
+        "56% lower cart abandonment",
+        "Featured in Design Week",
+      ],
+    },
   },
   {
     id: "3",

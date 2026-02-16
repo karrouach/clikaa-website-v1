@@ -21,7 +21,7 @@ export function TeamGrid() {
             </span>
           </TextReveal>
           <TextReveal delay={0.1}>
-            <h2 className="mt-4 text-display-md font-bold">
+            <h2 className="mt-2 text-display-md font-bold leading-tight">
               Meet the Creatives
             </h2>
           </TextReveal>

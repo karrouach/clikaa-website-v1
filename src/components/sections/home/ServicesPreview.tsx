@@ -33,7 +33,7 @@ export function ServicesPreview() {
               </span>
             </TextReveal>
             <TextReveal delay={0.1}>
-              <h2 className="mt-4 text-display-md font-bold">
+              <h2 className="mt-2 text-display-lg font-bold leading-tight">
                 Our Services
               </h2>
             </TextReveal>

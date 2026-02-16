@@ -1,3 +1,8 @@
+export interface CaseStudySection {
+  title: string;
+  body: string;
+}
+
 export interface Project {
   id: string;
   slug: string;
@@ -10,6 +15,12 @@ export interface Project {
   images: string[];
   tags: string[];
   link?: string;
+  caseStudy?: {
+    challenge: string;
+    approach: string;
+    sections: CaseStudySection[];
+    results?: string[];
+  };
 }
 
 export interface Service {

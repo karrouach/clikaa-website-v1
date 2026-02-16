@@ -60,7 +60,7 @@ export function Header() {
                 size="sm"
                 className="hidden lg:inline-flex"
               >
-                Get in Touch
+                Book a Strategy Call
               </Button>
 
               <button

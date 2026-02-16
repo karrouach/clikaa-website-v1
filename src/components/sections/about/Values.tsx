@@ -17,7 +17,7 @@ export function Values() {
             </span>
           </TextReveal>
           <TextReveal delay={0.1}>
-            <h2 className="mt-4 text-display-md font-bold">Our Values</h2>
+            <h2 className="mt-2 text-display-md font-bold leading-tight">Our Values</h2>
           </TextReveal>
         </div>
 

@@ -33,7 +33,7 @@ export function Marquee({
     >
       <div
         className={cn(
-          "flex shrink-0 gap-8 py-4",
+          "flex shrink-0 gap-6 py-4",
           pauseOnHover && "hover:[animation-play-state:paused]"
         )}
         style={{
@@ -45,7 +45,7 @@ export function Marquee({
       </div>
       <div
         className={cn(
-          "flex shrink-0 gap-8 py-4",
+          "flex shrink-0 gap-6 py-4",
           pauseOnHover && "hover:[animation-play-state:paused]"
         )}
         style={{

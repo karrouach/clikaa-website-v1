@@ -8,7 +8,7 @@
   --muted: #666666;
   --border: #E5E5E5;
   --card: #F6F4EF;
-  --accent: #091CCA;
+  --accent: #111111;
 }
 
 * {
@@ -89,8 +89,8 @@ video {
   }
 
   .section-padding {
-    padding-top: clamp(6rem, 15vh, 12rem);
-    padding-bottom: clamp(6rem, 15vh, 12rem);
+    padding-top: clamp(3rem, 8vh, 6rem);
+    padding-bottom: clamp(3rem, 8vh, 6rem);
   }
 
   .container-padding {

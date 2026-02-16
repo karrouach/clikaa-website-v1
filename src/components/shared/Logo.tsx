@@ -8,9 +8,10 @@ interface LogoProps {
   className?: string;
   width?: number;
   height?: number;
+  invert?: boolean;
 }
 
-export function Logo({ className, width = 172, height = 42 }: LogoProps) {
+export function Logo({ className, width = 120, height = 30, invert = false }: LogoProps) {
   return (
     <Link
       href="/"
@@ -22,7 +23,7 @@ export function Logo({ className, width = 172, height = 42 }: LogoProps) {
         width={width}
         height={height}
         priority
-        className="h-auto"
+        className={cn("h-auto", invert && "brightness-0 invert")}
       />
     </Link>
   );

@@ -51,14 +51,14 @@ function FAQItem({
   onToggle: () => void;
 }) {
   return (
-    <div className="border-b border-[#C0B8A8]">
+    <div className="border-b border-border">
       <button
         onClick={onToggle}
-        className="flex w-full items-center justify-between py-6 md:py-8 text-left group"
+        className="flex w-full items-center justify-between py-5 md:py-6 text-left group"
       >
         <span
-          className={`text-lg md:text-xl font-medium transition-colors duration-300 ${
-            isOpen ? "text-[#091CCA]" : "text-[#111111]"
+          className={`text-base md:text-lg font-medium transition-colors duration-300 ${
+            isOpen ? "text-foreground" : "text-foreground/80"
           }`}
         >
           {item.question}
@@ -66,13 +66,13 @@ function FAQItem({
         <motion.span
           animate={{ rotate: isOpen ? 45 : 0 }}
           transition={{ duration: 0.3, ease: smoothEasing }}
-          className={`ml-4 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border transition-colors duration-300 ${
+          className={`ml-4 flex h-7 w-7 shrink-0 items-center justify-center rounded-full border transition-colors duration-300 ${
             isOpen
-              ? "border-[#091CCA] text-[#091CCA]"
-              : "border-[#C0B8A8] text-[#111111]/50 group-hover:border-[#111111] group-hover:text-[#111111]"
+              ? "border-foreground text-foreground"
+              : "border-border text-muted group-hover:border-foreground/40 group-hover:text-foreground"
           }`}
         >
-          <Plus className="h-4 w-4" />
+          <Plus className="h-3.5 w-3.5" />
         </motion.span>
       </button>
       <AnimatePresence initial={false}>
@@ -84,7 +84,7 @@ function FAQItem({
             transition={{ duration: 0.4, ease: smoothEasing }}
             className="overflow-hidden"
           >
-            <p className="pb-6 md:pb-8 text-base md:text-lg text-muted leading-relaxed max-w-3xl">
+            <p className="pb-5 md:pb-6 text-sm md:text-base text-muted leading-relaxed max-w-3xl">
               {item.answer}
             </p>
           </motion.div>
@@ -100,8 +100,7 @@ export function FAQ() {
   return (
     <section className="section-padding">
       <Container>
-        <div className="grid gap-12 lg:grid-cols-[1fr_2fr] lg:gap-20">
-          {/* Left: Header */}
+        <div className="grid gap-10 lg:grid-cols-[1fr_2fr] lg:gap-16">
           <div>
             <TextReveal>
               <span className="text-sm font-medium uppercase tracking-widest text-muted">
@@ -109,22 +108,19 @@ export function FAQ() {
               </span>
             </TextReveal>
             <TextReveal delay={0.1}>
-              <h2 className="mt-4 text-display-md font-bold tracking-tight text-[#111111]">
-                Questions?
-                <br />
-                <span className="text-[#091CCA]">Answers.</span>
+              <h2 className="mt-2 text-display-lg font-bold tracking-tight leading-tight">
+                Questions? Answers.
               </h2>
             </TextReveal>
-            <RevealOnScroll delay={0.2} className="mt-4">
-              <p className="text-lg text-muted">
+            <RevealOnScroll delay={0.2} className="mt-3">
+              <p className="text-base text-muted">
                 Everything you need to know about working with us.
               </p>
             </RevealOnScroll>
           </div>
 
-          {/* Right: Accordion */}
           <RevealOnScroll delay={0.2}>
-            <div className="border-t border-[#C0B8A8]">
+            <div className="border-t border-border">
               {faqs.map((item, index) => (
                 <FAQItem
                   key={index}

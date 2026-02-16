@@ -35,7 +35,7 @@ export function ArticleContent({ post }: ArticleContentProps) {
         </TextReveal>
 
         <TextReveal delay={0.1}>
-          <h1 className="mt-4 text-display-sm font-bold">{post.title}</h1>
+          <h1 className="mt-2 text-display-sm font-bold leading-tight">{post.title}</h1>
         </TextReveal>
 
         <RevealOnScroll delay={0.2}>
