@@ -57,7 +57,7 @@ export function Header() {
               <Button
                 href="/contact"
                 variant="outline"
-                size="sm"
+                size="md"
                 className="hidden lg:inline-flex"
               >
                 Book a Strategy Call

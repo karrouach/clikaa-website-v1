@@ -91,7 +91,7 @@ export function ContactForm() {
             isLoading={formState.status === "loading"}
             disabled={formState.status === "loading"}
           >
-            <Send className="mr-2 h-4 w-4" />
+            <Send className="mr-2 h-4 w-4 shrink-0" />
             Send Message
           </Button>
 

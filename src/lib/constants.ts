@@ -1,9 +1,8 @@
 export const SITE_CONFIG = {
   name: "Clikaa",
-  description: "Digital agency crafting exceptional web experiences",
+  description: "We help startups and growing tech companies turn brand, product and pitch into growth engines",
   url: "https://clikaa.com",
   email: "hello@clikaa.com",
-  phone: "+1 (555) 123-4567",
   address: "123 Creative Street, Design District, NYC 10001",
 };
 
@@ -17,10 +16,10 @@ export const NAVIGATION = [
 ] as const;
 
 export const SOCIAL_LINKS = [
-  { label: "Twitter", href: "https://twitter.com/clikaa", icon: "Twitter" },
-  { label: "LinkedIn", href: "https://linkedin.com/company/clikaa", icon: "Linkedin" },
-  { label: "Instagram", href: "https://instagram.com/clikaa", icon: "Instagram" },
-  { label: "GitHub", href: "https://github.com/clikaa", icon: "Github" },
+  { label: "X", href: "https://x.com/clikaa", icon: "Twitter" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/company/clikaa/", icon: "Linkedin" },
+  { label: "Instagram", href: "https://www.instagram.com/clikaagency/", icon: "Instagram" },
+  { label: "Dribbble", href: "https://dribbble.com/clikaa", icon: "Dribbble" },
 ] as const;
 
 export const BREAKPOINTS = {

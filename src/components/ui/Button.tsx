@@ -88,7 +88,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
             </svg>
           </span>
         )}
-        <span className={cn(isLoading && "invisible")}>{children}</span>
+        <span className={cn("inline-flex items-center whitespace-nowrap", isLoading && "invisible")}>{children}</span>
       </>
     );
 

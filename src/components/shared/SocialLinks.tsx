@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Twitter, Linkedin, Instagram, Github, LucideIcon } from "lucide-react";
+import { Twitter, Linkedin, Instagram, Dribbble, LucideIcon } from "lucide-react";
 import { SOCIAL_LINKS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
@@ -9,7 +9,7 @@ const iconMap: Record<string, LucideIcon> = {
   Twitter,
   Linkedin,
   Instagram,
-  Github,
+  Dribbble,
 };
 
 interface SocialLinksProps {

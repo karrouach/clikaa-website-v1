@@ -1,6 +1,6 @@
 "use client";
 
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 import { TextReveal } from "@/components/animations/TextReveal";
 import { RevealOnScroll } from "@/components/animations/RevealOnScroll";
 import { SocialLinks } from "@/components/shared/SocialLinks";
@@ -15,7 +15,7 @@ export function ContactInfo() {
         </span>
       </TextReveal>
       <TextReveal delay={0.1}>
-        <h1 className="mt-2 text-display-md font-bold leading-tight">
+        <h1 className="mt-2 text-display-lg font-bold leading-tight">
           Let&apos;s start a conversation
         </h1>
       </TextReveal>
@@ -38,21 +38,6 @@ export function ContactInfo() {
               className="text-muted transition-colors hover:text-foreground"
             >
               {SITE_CONFIG.email}
-            </a>
-          </div>
-        </div>
-
-        <div className="flex items-start gap-4">
-          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-card">
-            <Phone className="h-5 w-5" />
-          </div>
-          <div>
-            <h3 className="font-semibold">Phone</h3>
-            <a
-              href={`tel:${SITE_CONFIG.phone.replace(/\s/g, "")}`}
-              className="text-muted transition-colors hover:text-foreground"
-            >
-              {SITE_CONFIG.phone}
             </a>
           </div>
         </div>

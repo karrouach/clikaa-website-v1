@@ -16,7 +16,7 @@ const clients = [
 
 export function TrustedBy() {
   return (
-    <section className="py-12 md:py-16 border-y border-border">
+    <section className="mt-12 md:mt-16 py-12 md:py-16 border-y border-border">
       <Container>
         <RevealOnScroll className="mb-8 text-center">
           <p className="text-sm font-medium uppercase tracking-widest text-muted">

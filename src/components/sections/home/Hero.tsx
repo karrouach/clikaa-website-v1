@@ -19,23 +19,12 @@ export function Hero() {
             </span>
           </TextReveal>
 
-          <div className="space-y-2">
-            <TextReveal delay={0.3}>
-              <h1 className="text-display-xl font-bold leading-none tracking-tight">
-                We craft digital
-              </h1>
-            </TextReveal>
-            <TextReveal delay={0.4}>
-              <h1 className="text-display-xl font-bold leading-none tracking-tight">
-                experiences that
-              </h1>
-            </TextReveal>
-            <TextReveal delay={0.5}>
-              <h1 className="text-display-xl font-bold leading-none tracking-tight text-gradient">
-                inspire & convert
-              </h1>
-            </TextReveal>
-          </div>
+          <TextReveal delay={0.3}>
+            <h1 className="text-display-xl font-bold leading-[1.05] tracking-tight">
+              We craft digital experiences that{" "}
+              <span className="text-gradient">inspire & convert</span>
+            </h1>
+          </TextReveal>
 
           <RevealOnScroll delay={0.6} className="mt-8 max-w-xl">
             <p className="text-lg text-muted">
@@ -45,13 +34,13 @@ export function Hero() {
             </p>
           </RevealOnScroll>
 
-          <RevealOnScroll delay={0.7} className="mt-10 flex flex-wrap gap-4">
+          <RevealOnScroll delay={0.7} className="mt-10 flex flex-col sm:flex-row gap-4">
             <MagneticButton href="/contact">
               Book a Strategy Call
             </MagneticButton>
             <MagneticButton
               href="/projects"
-              className="bg-transparent text-foreground border border-foreground hover:bg-foreground hover:text-background"
+              className="bg-transparent text-foreground border border-foreground hover:bg-foreground hover:text-background whitespace-nowrap"
             >
               View Case Studies
             </MagneticButton>
@@ -60,7 +49,7 @@ export function Hero() {
       </Container>
 
       <motion.div
-        className="absolute bottom-10 left-1/2 -translate-x-1/2"
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 hidden md:block"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1, duration: 0.6, ease: smoothEasing }}

@@ -16,14 +16,13 @@ export function CTASection() {
             </span>
           </TextReveal>
           <TextReveal delay={0.1}>
-            <h2 className="mt-2 text-display-lg font-bold leading-tight">
+            <h2 className="mt-2 text-[clamp(2rem,6vw,4.5rem)] font-bold leading-[1.1]">
               Building something ambitious? So are we.
             </h2>
           </TextReveal>
           <RevealOnScroll delay={0.2}>
-            <p className="mx-auto mt-4 max-w-2xl text-lg text-muted">
-              We partner with founders who are moving fast and need design that
-              moves with them.
+            <p className="mx-auto mt-4 max-w-2xl text-base md:text-lg text-muted">
+              We partner with founders who are moving fast and need design that moves with them.
             </p>
           </RevealOnScroll>
           <RevealOnScroll delay={0.3} className="mt-8">

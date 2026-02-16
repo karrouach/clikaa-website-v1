@@ -36,8 +36,7 @@ export function Footer() {
           <RevealOnScroll className="lg:col-span-5">
             <Logo invert />
             <p className="mt-6 max-w-sm text-white/60">
-              {SITE_CONFIG.description}. We craft digital experiences that
-              captivate, engage, and deliver results.
+              {SITE_CONFIG.description}.
             </p>
             <div className="mt-8">
               <SocialLinks />
@@ -79,14 +78,6 @@ export function Footer() {
                   className="text-white/80 transition-colors hover:text-white"
                 >
                   {SITE_CONFIG.email}
-                </a>
-              </p>
-              <p className="mt-2">
-                <a
-                  href={`tel:${SITE_CONFIG.phone.replace(/\s/g, "")}`}
-                  className="text-white/80 transition-colors hover:text-white"
-                >
-                  {SITE_CONFIG.phone}
                 </a>
               </p>
             </address>
