@@ -48,18 +48,18 @@ export function WhoIsClikaa() {
             </RevealOnScroll>
           </div>
 
-          <StaggerContainer className="grid grid-cols-2 gap-4 md:gap-5">
+          <StaggerContainer className="grid grid-cols-2 gap-5 md:gap-6">
             {achievements.map((stat) => (
               <StaggerItem key={stat.label}>
                 <motion.div
-                  className="rounded-2xl bg-card p-6 md:p-8 text-center"
+                  className="rounded-2xl bg-card p-8 md:p-10 text-center"
                   whileHover={{ scale: 1.02 }}
                   transition={{ duration: 0.3, ease: smoothEasing }}
                 >
-                  <span className="block text-3xl md:text-4xl font-bold tracking-tight">
+                  <span className="block text-4xl md:text-5xl font-bold tracking-tight">
                     {stat.value}
                   </span>
-                  <span className="mt-2 block text-xs md:text-sm text-muted font-medium">
+                  <span className="mt-2 block text-sm md:text-base text-muted font-medium">
                     {stat.label}
                   </span>
                 </motion.div>

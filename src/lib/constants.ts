@@ -12,14 +12,13 @@ export const NAVIGATION = [
   { label: "Projects", href: "/projects" },
   { label: "Services", href: "/services" },
   { label: "Blog", href: "/blog" },
-  { label: "Contact", href: "/contact" },
 ] as const;
 
 export const SOCIAL_LINKS = [
-  { label: "X", href: "https://x.com/clikaa", icon: "Twitter" },
+  { label: "X", href: "https://x.com/clikaa", icon: "X" },
   { label: "LinkedIn", href: "https://www.linkedin.com/company/clikaa/", icon: "Linkedin" },
   { label: "Instagram", href: "https://www.instagram.com/clikaagency/", icon: "Instagram" },
-  { label: "Dribbble", href: "https://dribbble.com/clikaa", icon: "Dribbble" },
+  { label: "Dribbble", href: "https://dribbble.com/clikaa-agency", icon: "Dribbble" },
 ] as const;
 
 export const BREAKPOINTS = {

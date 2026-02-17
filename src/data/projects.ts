@@ -156,6 +156,7 @@ export const projectCategories = [
   "E-commerce",
   "Mobile App",
   "Branding",
+  "Pitch Decks",
 ] as const;
 
 export function getProjectBySlug(slug: string): Project | undefined {

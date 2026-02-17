@@ -51,11 +51,11 @@ function ProcessStepCard({ step, index }: ProcessStepCardProps) {
       <p className="mt-2 text-muted">{step.description}</p>
 
       {index < processSteps.length - 1 && (
-        <div className="absolute -right-4 top-1/2 z-10 hidden -translate-y-1/2 lg:flex items-center justify-center h-8 w-8">
+        <div className="absolute right-0 top-1/2 z-10 hidden translate-x-[calc(50%+1rem)] -translate-y-1/2 lg:flex items-center justify-center">
           <svg
             viewBox="0 0 24 24"
             fill="none"
-            className="h-6 w-6 text-muted"
+            className="h-5 w-5 text-muted"
           >
             <path
               d="M9 5l7 7-7 7"
