@@ -22,7 +22,7 @@ const faqs = [
   {
     question: "Do you offer ongoing design support?",
     answer:
-      "Yes! Our Fractional Design Team service gives you on-demand access to senior designers without the overhead of a full-time hire. It's perfect for scaling teams that need consistent, high-quality creative output.",
+      "Yes. While we do project-based work, many clients retain us as their dedicated external design team for monthly support on ads, decks, and website updates.",
   },
   {
     question: "What's your design process like?",

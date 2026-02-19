@@ -21,16 +21,17 @@ export function Hero() {
 
           <TextReveal delay={0.3}>
             <h1 className="text-display-xl font-bold leading-[1.05] tracking-tight">
-              We craft digital experiences that{" "}
-              <span className="text-gradient">inspire & convert</span>
+              Turn Your Vision into a{" "}
+              <span className="text-gradient">Market-Leading Brand</span>
             </h1>
           </TextReveal>
 
           <RevealOnScroll delay={0.6} className="mt-8 max-w-xl">
             <p className="text-lg text-muted">
-              We&apos;re a creative studio specializing in brand identity, web design,
-              and digital experiences. We help ambitious brands stand out and
-              connect with their audience.
+              We provide strategic design support for ambitious founders and
+              growing teams. From pitch decks that raise capital to websites that
+              drive conversion, we build the visual infrastructure your business
+              needs to scale.
             </p>
           </RevealOnScroll>
 
