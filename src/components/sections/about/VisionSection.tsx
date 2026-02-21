@@ -6,39 +6,36 @@ import { RevealOnScroll } from "@/components/animations/RevealOnScroll";
 
 export function VisionSection() {
   return (
-    <section className="section-padding">
+    <section className="section-padding bg-foreground text-background">
       <Container>
-        <div className="grid gap-16 lg:grid-cols-2 lg:gap-24">
-          <div>
-            <TextReveal>
-              <span className="text-sm font-medium uppercase tracking-widest text-muted">
-                Our Vision
-              </span>
-            </TextReveal>
-            <TextReveal delay={0.1}>
-              <h1 className="mt-2 text-display-lg font-bold leading-tight">
-                Creating meaningful digital experiences
-              </h1>
-            </TextReveal>
-          </div>
-          <div className="flex flex-col justify-center">
-            <RevealOnScroll>
-              <p className="text-xl leading-relaxed text-muted">
-                We believe that great design has the power to transform businesses
-                and connect people. Our mission is to create digital experiences
-                that are not only visually stunning but also strategically sound
-                and user-centered.
-              </p>
-            </RevealOnScroll>
-            <RevealOnScroll delay={0.1}>
-              <p className="mt-6 text-xl leading-relaxed text-muted">
-                Founded in 2018, we&apos;ve grown from a small team with big dreams
-                to a full-service digital agency serving clients worldwide. Our
-                approach combines creativity with strategy, artistry with
-                technology.
-              </p>
-            </RevealOnScroll>
-          </div>
+        <TextReveal>
+          <span className="text-sm font-medium uppercase tracking-widest opacity-40">
+            Our Vision
+          </span>
+        </TextReveal>
+
+        <TextReveal delay={0.1}>
+          <p className="mt-4 text-display-lg font-bold leading-tight max-w-5xl">
+            We believe design is a growth lever, not just decoration.
+          </p>
+        </TextReveal>
+
+        <div className="mt-12 grid gap-8 lg:grid-cols-2 border-t border-background/20 pt-12">
+          <RevealOnScroll delay={0.2}>
+            <p className="text-lg leading-relaxed opacity-60">
+              In a crowded market, trust is the most valuable currency. Clikaa
+              was built to help ambitious businesses look as professional as they
+              act. We strip away the noise and focus on clarity, ensuring your
+              brand signals authority from the very first interaction.
+            </p>
+          </RevealOnScroll>
+          <RevealOnScroll delay={0.3}>
+            <p className="text-lg leading-relaxed opacity-60">
+              We don&apos;t just hand over files and walk away; we act as an
+              extension of your team, ensuring your visual language evolves as
+              fast as your business does.
+            </p>
+          </RevealOnScroll>
         </div>
       </Container>
     </section>

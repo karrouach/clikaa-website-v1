@@ -28,7 +28,7 @@ export function WhoIsClikaa() {
             </TextReveal>
             <TextReveal delay={0.1}>
               <h2 className="mt-2 text-display-lg font-bold tracking-tight leading-tight">
-                We translate complex ideas into clear, compelling design.
+                Turning complexity into clear design.
               </h2>
             </TextReveal>
             <RevealOnScroll delay={0.2} className="mt-5">

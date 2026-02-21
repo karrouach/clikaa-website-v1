@@ -68,46 +68,28 @@ export const teamMembers: TeamMember[] = [
 
 export const timeline: TimelineItem[] = [
   {
-    year: "2018",
-    title: "The Beginning",
-    description:
-      "Clikaa was founded with a simple mission: create digital experiences that matter. Starting as a two-person team, we focused on quality over quantity.",
-  },
-  {
-    year: "2019",
-    title: "First Major Client",
-    description:
-      "Landed our first enterprise client, proving that a small team could deliver big results. This project set the standard for everything that followed.",
-  },
-  {
-    year: "2020",
-    title: "Remote-First Transition",
-    description:
-      "Embraced remote work fully, allowing us to attract talent from around the world and serve clients globally without geographical limitations.",
-  },
-  {
-    year: "2021",
-    title: "Team Expansion",
-    description:
-      "Grew to a team of 15 specialists, adding dedicated strategy, research, and motion design capabilities to our service offerings.",
-  },
-  {
-    year: "2022",
-    title: "Award Recognition",
-    description:
-      "Received multiple industry awards for our innovative approach to digital design, including recognition from Awwwards and CSS Design Awards.",
-  },
-  {
-    year: "2023",
-    title: "New Horizons",
-    description:
-      "Expanded into AI-powered solutions and immersive experiences, staying at the forefront of digital innovation while maintaining our human-centered approach.",
-  },
-  {
     year: "2024",
-    title: "Today & Beyond",
+    title: "Redefining the Design Partner",
     description:
-      "Continuing to push boundaries with a talented team of 25+ creatives, serving clients across 15 countries with the same passion we started with.",
+      "Clikaa was launched with a single, clear mission: to give fast-moving startups access to top-tier strategic design without the slow timelines of traditional agencies.",
+  },
+  {
+    year: "2025",
+    title: "Integrating Growth & Design",
+    description:
+      "We expanded our core capabilities by integrating dedicated Growth Marketing. We realized that beautiful design is only half the equation—it needs to drive measurable business results and conversion.",
+  },
+  {
+    year: "2025",
+    title: "Launching \"Design-as-a-Service\"",
+    description:
+      "To better serve our fastest-growing clients, we introduced our ongoing design retainer. We shifted from one-off projects to acting as the dedicated, on-demand creative department for scaling businesses.",
+  },
+  {
+    year: "Present",
+    title: "Building for the Future",
+    description:
+      "Today, we are proud to partner with innovative founders across Tech, SaaS, and AI. From closing seed rounds with our pitch decks to scaling user bases with our web experiences, we are building the visual infrastructure for tomorrow's leaders.",
   },
 ];
 

@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import {
+  AboutHero,
   VisionSection,
   TeamGrid,
   Timeline,
@@ -16,6 +17,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
+      <AboutHero />
       <VisionSection />
       <TeamGrid />
       <Timeline />
