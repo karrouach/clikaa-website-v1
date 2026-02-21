@@ -43,7 +43,7 @@ export function TrustedBy() {
           </div>
           <div
             aria-hidden
-            className="flex shrink-0 items-center gap-12 md:gap-20 animate-marquee pl-12 md:pl-20"
+            className="flex shrink-0 items-center gap-12 md:gap-20 animate-marquee pl-20 md:pl-36"
           >
             {[...clients, ...clients].map((client, index) => (
               <a

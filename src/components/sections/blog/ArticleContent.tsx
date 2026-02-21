@@ -27,15 +27,13 @@ export function ArticleContent({ post }: ArticleContentProps) {
         </Link>
 
         <TextReveal>
-          <div className="flex flex-wrap items-center gap-3 text-sm text-muted">
+          <div className="flex flex-wrap items-center gap-2 text-sm text-muted">
             <span>{post.category}</span>
             {post.tags?.map((tag) => (
-              <span
-                key={tag}
-                className="rounded-full border border-border px-2.5 py-0.5 text-xs font-medium"
-              >
-                {tag}
-              </span>
+              <>
+                <span key={`sep-${tag}`}>&bull;</span>
+                <span key={tag}>{tag}</span>
+              </>
             ))}
             <span>&bull;</span>
             <span>{post.readTime}</span>
