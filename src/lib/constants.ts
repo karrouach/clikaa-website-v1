@@ -3,7 +3,7 @@ export const SITE_CONFIG = {
   description: "We help startups and growing tech companies turn brand, product and pitch into growth engines",
   url: "https://clikaa.com",
   email: "hello@clikaa.com",
-  address: "123 Creative Street, Design District, NYC 10001",
+  address: "Ain Sebaa, Casablanca 20250",
 };
 
 export const NAVIGATION = [

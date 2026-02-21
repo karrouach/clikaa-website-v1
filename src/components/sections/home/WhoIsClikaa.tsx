@@ -43,7 +43,7 @@ export function WhoIsClikaa() {
             </RevealOnScroll>
           </div>
 
-          <StaggerContainer className="grid grid-cols-2 gap-5 md:gap-6">
+          <StaggerContainer className="grid grid-cols-2 gap-6 md:gap-8">
             {achievements.map((stat) => (
               <StaggerItem key={stat.label}>
                 <motion.div

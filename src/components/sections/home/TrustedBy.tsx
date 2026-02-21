@@ -4,10 +4,13 @@ import { Container } from "@/components/ui/Container";
 import { RevealOnScroll } from "@/components/animations/RevealOnScroll";
 
 const clients = [
-  { name: "Jovari", logo: "JOVARI", href: "https://jovari.com/" },
-  { name: "Snipd", logo: "SNIPD", href: "https://www.snipd.com/" },
-  { name: "Xplor Technologies", logo: "XPLOR", href: "https://www.xplortechnologies.com/" },
-  { name: "Youkaver", logo: "YOUKAVER", href: "https://youkaver.youcan.store/" },
+  { name: "Jovari", logo: "/partner-logos/Jovari.svg", href: "https://jovari.com/" },
+  { name: "Snipd", logo: "/partner-logos/Snipd.svg", href: "https://www.snipd.com/" },
+  { name: "Youkaver", logo: "/partner-logos/Youkaver.svg", href: "https://youkaver.youcan.store/" },
+  { name: "Flic", logo: "/partner-logos/Flic.svg", href: "#" },
+  { name: "Quantum", logo: "/partner-logos/Quantum.svg", href: "#" },
+  { name: "Themar", logo: "/partner-logos/Themar-Logo.svg", href: "#" },
+  { name: "Zapp", logo: "/partner-logos/Zapp.svg", href: "#" },
 ];
 
 export function TrustedBy() {
@@ -21,22 +24,26 @@ export function TrustedBy() {
         </RevealOnScroll>
 
         <div className="flex overflow-hidden">
-          <div className="flex shrink-0 items-center gap-10 md:gap-16 animate-marquee">
+          <div className="flex shrink-0 items-center gap-12 md:gap-20 animate-marquee">
             {[...clients, ...clients].map((client, index) => (
               <a
                 key={`${client.name}-${index}`}
                 href={client.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="whitespace-nowrap text-lg md:text-2xl font-bold text-foreground/20 transition-colors duration-300 hover:text-foreground/60 select-none"
+                className="shrink-0 select-none"
               >
-                {client.logo}
+                <img
+                  src={client.logo}
+                  alt={client.name}
+                  className="h-7 md:h-9 w-auto object-contain brightness-0 opacity-30 hover:brightness-100 hover:opacity-100 transition-all duration-300"
+                />
               </a>
             ))}
           </div>
           <div
             aria-hidden
-            className="flex shrink-0 items-center gap-10 md:gap-16 animate-marquee"
+            className="flex shrink-0 items-center gap-12 md:gap-20 animate-marquee"
           >
             {[...clients, ...clients].map((client, index) => (
               <a
@@ -45,9 +52,13 @@ export function TrustedBy() {
                 target="_blank"
                 rel="noopener noreferrer"
                 tabIndex={-1}
-                className="whitespace-nowrap text-lg md:text-2xl font-bold text-foreground/20 transition-colors duration-300 hover:text-foreground/60 select-none"
+                className="shrink-0 select-none"
               >
-                {client.logo}
+                <img
+                  src={client.logo}
+                  alt={client.name}
+                  className="h-7 md:h-9 w-auto object-contain brightness-0 opacity-30 hover:brightness-100 hover:opacity-100 transition-all duration-300"
+                />
               </a>
             ))}
           </div>

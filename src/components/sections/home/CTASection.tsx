@@ -21,7 +21,7 @@ export function CTASection() {
             </h2>
           </TextReveal>
           <RevealOnScroll delay={0.2}>
-            <p className="mx-auto mt-4 max-w-2xl text-base md:text-lg text-muted">
+            <p className="mt-4 text-base md:text-lg text-muted whitespace-nowrap">
               We partner with founders who are moving fast and need design that moves with them.
             </p>
           </RevealOnScroll>

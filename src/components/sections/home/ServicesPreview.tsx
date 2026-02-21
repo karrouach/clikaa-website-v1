@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Monitor, Palette, Layers, ShoppingCart, Target, Sparkles } from "lucide-react";
+import { ArrowUpRight, Monitor, Palette, Layers, TrendingUp, Target, Sparkles } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { TextReveal } from "@/components/animations/TextReveal";
 import { RevealOnScroll } from "@/components/animations/RevealOnScroll";
@@ -16,7 +16,7 @@ const iconMap: Record<string, React.ElementType> = {
   Monitor,
   Palette,
   Layers,
-  ShoppingCart,
+  TrendingUp,
   Target,
   Sparkles,
 };

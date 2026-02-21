@@ -63,10 +63,10 @@ export const services: Service[] = [
   },
   {
     id: "5",
-    title: "Growth Creative (Ads & Social)",
+    title: "Growth Creative",
     description:
       "Stop the scroll with high-impact creatives. We design ad sets and social assets optimized for clicks, engagement, and ROI.",
-    icon: "ShoppingCart",
+    icon: "TrendingUp",
     features: [
       "Ad creative design",
       "Social media assets",

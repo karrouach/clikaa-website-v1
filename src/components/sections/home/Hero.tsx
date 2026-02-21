@@ -21,8 +21,8 @@ export function Hero() {
 
           <TextReveal delay={0.3}>
             <h1 className="text-display-xl font-bold leading-[1.05] tracking-tight">
-              Turn Your Vision into a{" "}
-              <span className="text-gradient">Market-Leading Brand</span>
+              Scaling Brands Through{" "}
+              <span className="text-gradient">Strategic Design</span>
             </h1>
           </TextReveal>
 

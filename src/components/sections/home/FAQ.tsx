@@ -12,7 +12,7 @@ const faqs = [
   {
     question: "What kind of companies does Clikaa work with?",
     answer:
-      "We primarily work with startups and scale-ups — from pre-seed founders preparing their first pitch deck to Series B companies overhauling their digital presence. If you're ambitious and care about how your brand looks and performs, we're a good fit.",
+      "We primarily work with startups and scale-ups, from pre-seed founders preparing their first pitch deck to Series B companies overhauling their digital presence. If you're ambitious and care about how your brand looks and performs, we're a good fit.",
   },
   {
     question: "How long does a typical project take?",
