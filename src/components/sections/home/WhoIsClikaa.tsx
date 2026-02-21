@@ -27,7 +27,7 @@ export function WhoIsClikaa() {
               </span>
             </TextReveal>
             <TextReveal delay={0.1}>
-              <h2 className="mt-2 text-display-lg font-bold tracking-tight leading-tight">
+              <h2 className="mt-2 text-display-lg font-bold tracking-tight leading-[1.0]">
                 Turning complexity into clear design.
               </h2>
             </TextReveal>
@@ -47,7 +47,7 @@ export function WhoIsClikaa() {
             {achievements.map((stat) => (
               <StaggerItem key={stat.label}>
                 <motion.div
-                  className="rounded-2xl bg-card p-8 md:p-10 text-center"
+                  className="rounded-2xl bg-card p-10 md:p-12 text-center"
                   whileHover={{ scale: 1.02 }}
                   transition={{ duration: 0.3, ease: smoothEasing }}
                 >

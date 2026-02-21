@@ -11,7 +11,7 @@ export function AboutHero() {
       <Container>
         <div className="max-w-5xl">
           <TextReveal delay={0.2}>
-            <h1 className="text-display-xl font-bold leading-[1.05] tracking-tight">
+            <h1 className="text-display-lg font-bold leading-[1.05] tracking-tight">
               <span className="block">Design for the Speed of</span>
               <span className="text-gradient">Innovation.</span>
             </h1>

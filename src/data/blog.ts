@@ -76,6 +76,7 @@ Ready to turn your vision into a deck that closes? Book a Strategy Call with Cli
     author: "Clikaa",
     date: "2024-03-15",
     category: "Strategy",
+    tags: ["Pitch Decks"],
     thumbnail: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=500&fit=crop",
     readTime: "8 min read",
   },

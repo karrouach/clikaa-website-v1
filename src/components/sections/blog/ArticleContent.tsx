@@ -27,15 +27,23 @@ export function ArticleContent({ post }: ArticleContentProps) {
         </Link>
 
         <TextReveal>
-          <div className="flex items-center gap-3 text-sm text-muted">
+          <div className="flex flex-wrap items-center gap-3 text-sm text-muted">
             <span>{post.category}</span>
+            {post.tags?.map((tag) => (
+              <span
+                key={tag}
+                className="rounded-full border border-border px-2.5 py-0.5 text-xs font-medium"
+              >
+                {tag}
+              </span>
+            ))}
             <span>&bull;</span>
             <span>{post.readTime}</span>
           </div>
         </TextReveal>
 
         <TextReveal delay={0.1}>
-          <h1 className="mt-2 text-display-sm font-bold leading-tight">{post.title}</h1>
+          <h1 className="mt-4 text-display-sm font-bold leading-tight">{post.title}</h1>
         </TextReveal>
 
         <RevealOnScroll delay={0.2}>
@@ -60,14 +68,15 @@ export function ArticleContent({ post }: ArticleContentProps) {
       <Container size="narrow" className="py-16">
         <RevealOnScroll>
           <div
-            className="prose prose-invert prose-lg max-w-none
-              prose-headings:font-semibold prose-headings:tracking-tight
-              prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-4
-              prose-p:text-muted prose-p:leading-relaxed
-              prose-a:text-foreground prose-a:no-underline prose-a:border-b prose-a:border-foreground
-              prose-strong:text-foreground
-              prose-ul:text-muted prose-ol:text-muted
-              prose-li:marker:text-muted"
+            className="max-w-none
+              [&>h2]:text-2xl [&>h2]:font-bold [&>h2]:tracking-tight [&>h2]:text-foreground
+              [&>h2]:mt-16 [&>h2]:mb-6 [&>h2]:pb-4 [&>h2]:border-b [&>h2]:border-border
+              [&>h3]:text-lg [&>h3]:font-semibold [&>h3]:text-foreground [&>h3]:mt-8 [&>h3]:mb-3
+              [&>p]:text-muted [&>p]:leading-relaxed [&>p]:mt-5 [&>p]:text-base md:[&>p]:text-lg
+              [&>ul]:mt-5 [&>ul]:space-y-3 [&>ul]:pl-0
+              [&>ul>li]:text-muted [&>ul>li]:leading-relaxed [&>ul>li]:pl-5 [&>ul>li]:relative
+              [&>ul>li]:before:content-['–'] [&>ul>li]:before:absolute [&>ul>li]:before:left-0 [&>ul>li]:before:text-foreground/40
+              [&>strong]:text-foreground [&>strong]:font-semibold"
             dangerouslySetInnerHTML={{ __html: formatContent(post.content) }}
           />
         </RevealOnScroll>
@@ -76,21 +85,48 @@ export function ArticleContent({ post }: ArticleContentProps) {
   );
 }
 
+function parseBold(text: string): string {
+  return text.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
+}
+
 function formatContent(content: string): string {
-  return content
-    .split("\n")
-    .map((line) => {
-      line = line.trim();
-      if (!line) return "";
-      if (line.startsWith("## ")) {
-        return `<h2>${line.substring(3)}</h2>`;
+  const lines = content.split("\n");
+  const result: string[] = [];
+  let inList = false;
+
+  for (const raw of lines) {
+    const line = raw.trim();
+
+    if (!line) {
+      if (inList) {
+        result.push("</ul>");
+        inList = false;
       }
-      if (line.startsWith("- ")) {
-        return `<li>${line.substring(2)}</li>`;
-      }
-      return `<p>${line}</p>`;
-    })
-    .join("\n")
-    .replace(/<li>/g, "<ul><li>")
-    .replace(/<\/li>\n(?!<li>)/g, "</li></ul>\n");
+      continue;
+    }
+
+    if (line.startsWith("## ")) {
+      if (inList) { result.push("</ul>"); inList = false; }
+      result.push(`<h2>${parseBold(line.substring(3))}</h2>`);
+      continue;
+    }
+
+    if (line.startsWith("### ")) {
+      if (inList) { result.push("</ul>"); inList = false; }
+      result.push(`<h3>${parseBold(line.substring(4))}</h3>`);
+      continue;
+    }
+
+    if (line.startsWith("- ")) {
+      if (!inList) { result.push("<ul>"); inList = true; }
+      result.push(`<li>${parseBold(line.substring(2))}</li>`);
+      continue;
+    }
+
+    if (inList) { result.push("</ul>"); inList = false; }
+    result.push(`<p>${parseBold(line)}</p>`);
+  }
+
+  if (inList) result.push("</ul>");
+  return result.join("\n");
 }

@@ -54,6 +54,7 @@ export interface BlogPost {
   category: string;
   thumbnail: string;
   readTime: string;
+  tags?: string[];
 }
 
 export interface Testimonial {

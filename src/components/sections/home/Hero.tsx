@@ -20,8 +20,8 @@ export function Hero() {
           </TextReveal>
 
           <TextReveal delay={0.3}>
-            <h1 className="text-display-xl font-bold leading-[1.05] tracking-tight">
-              Scaling Brands Through{" "}
+            <h1 className="text-[clamp(2rem,7vw,8rem)] font-bold leading-[1.05] tracking-tight">
+              Your Dedicated Partner For{" "}
               <span className="text-gradient">Strategic Design</span>
             </h1>
           </TextReveal>

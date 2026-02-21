@@ -67,8 +67,16 @@ function BlogCard({ post }: BlogCardProps) {
           </motion.div>
         </div>
         <div className="p-6">
-          <div className="mb-3 flex items-center gap-3 text-sm text-muted">
+          <div className="mb-3 flex flex-wrap items-center gap-3 text-sm text-muted">
             <span>{post.category}</span>
+            {post.tags?.map((tag) => (
+              <span
+                key={tag}
+                className="rounded-full border border-border px-2.5 py-0.5 text-xs font-medium text-foreground/60"
+              >
+                {tag}
+              </span>
+            ))}
             <span>&bull;</span>
             <span>{post.readTime}</span>
           </div>
