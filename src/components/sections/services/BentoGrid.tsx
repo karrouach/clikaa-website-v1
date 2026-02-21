@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Monitor, Palette, Layers, ShoppingCart, Target, Sparkles, LucideIcon } from "lucide-react";
+import { Monitor, Palette, Layers, TrendingUp, Target, Sparkles, LucideIcon } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { TextReveal } from "@/components/animations/TextReveal";
 import { RevealOnScroll } from "@/components/animations/RevealOnScroll";
@@ -13,7 +13,7 @@ const iconMap: Record<string, LucideIcon> = {
   Monitor,
   Palette,
   Layers,
-  ShoppingCart,
+  TrendingUp,
   Target,
   Sparkles,
 };
