@@ -73,7 +73,7 @@ export function ArticleContent({ post }: ArticleContentProps) {
               [&>p]:text-muted [&>p]:leading-relaxed [&>p]:mt-5 [&>p]:text-base md:[&>p]:text-lg
               [&>ul]:mt-5 [&>ul]:space-y-3 [&>ul]:pl-0
               [&>ul>li]:text-muted [&>ul>li]:leading-relaxed [&>ul>li]:pl-5 [&>ul>li]:relative
-              [&>ul>li]:before:content-['–'] [&>ul>li]:before:absolute [&>ul>li]:before:left-0 [&>ul>li]:before:text-foreground/40
+              [&>ul>li]:before:content-['-'] [&>ul>li]:before:absolute [&>ul>li]:before:left-0 [&>ul>li]:before:text-foreground/40
               [&>strong]:text-foreground [&>strong]:font-semibold"
             dangerouslySetInnerHTML={{ __html: formatContent(post.content) }}
           />

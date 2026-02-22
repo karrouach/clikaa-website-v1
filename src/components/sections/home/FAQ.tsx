@@ -17,7 +17,7 @@ const faqs = [
   {
     question: "How long does a typical project take?",
     answer:
-      "It depends on the scope. A pitch deck usually takes 1–2 weeks. A full brand identity system takes 3–4 weeks. A website or digital product can range from 4–8 weeks. We'll give you a clear timeline during our kickoff call.",
+      "It depends on the scope. A pitch deck usually takes 1 to 2 weeks. A full brand identity system takes 3 to 4 weeks. A website or digital product can range from 4 to 8 weeks. We'll give you a clear timeline during our kickoff call.",
   },
   {
     question: "Do you offer ongoing design support?",

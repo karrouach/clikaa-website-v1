@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { TextReveal } from "@/components/animations/TextReveal";
 import { RevealOnScroll } from "@/components/animations/RevealOnScroll";
@@ -23,29 +24,40 @@ export function TeamGrid() {
 
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-start">
           <RevealOnScroll>
-            <div className="space-y-6 text-lg leading-relaxed text-muted">
-              <p>
-                I founded Clikaa because I kept watching exceptional tech
-                companies lose deals to lesser competitors who simply looked
-                better. After years embedded in the SaaS, Tech, and AI
-                ecosystems, I saw the gap clearly: the most innovative products
-                in the world were being outcompeted by superior design.
-              </p>
-              <p>
-                At Clikaa, you work directly with leadership—not a junior
-                account manager who receives your brief and passes it down a
-                chain. Every strategy, every visual system, and every pitch deck
-                receives senior-level thinking from day one.
-              </p>
-              <p>
-                My background sits at the intersection of technology and
-                storytelling. I understand the &ldquo;black box&rdquo; of AI, the complexity
-                of SaaS growth metrics, and the pressure of a fundraise. That
-                context is not something you can brief into a generalist
-                designer. It is built from years of working inside the
-                ecosystem—and it is what separates a strategist from a
-                pixel-pusher.
-              </p>
+            <div className="space-y-8">
+              <div className="relative aspect-[4/5] max-w-sm rounded-2xl overflow-hidden">
+                <Image
+                  src="/founder.jpg"
+                  alt="Founder, Clikaa"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+              <div className="space-y-6 text-lg leading-relaxed text-muted">
+                <p>
+                  I founded Clikaa because I kept watching exceptional tech
+                  companies lose deals to lesser competitors who simply looked
+                  better. After years embedded in the SaaS, Tech, and AI
+                  ecosystems, I saw the gap clearly: the most innovative products
+                  in the world were being outcompeted by superior design.
+                </p>
+                <p>
+                  At Clikaa, you work directly with leadership, not a junior
+                  account manager who receives your brief and passes it down a
+                  chain. Every strategy, every visual system, and every pitch deck
+                  receives senior-level thinking from day one.
+                </p>
+                <p>
+                  My background sits at the intersection of technology and
+                  storytelling. I understand the &ldquo;black box&rdquo; of AI,
+                  the complexity of SaaS growth metrics, and the pressure of a
+                  fundraise. That context is not something you can brief into a
+                  generalist designer. It is built from years of working inside
+                  the ecosystem, and it is what separates a strategist from a
+                  pixel-pusher.
+                </p>
+              </div>
             </div>
           </RevealOnScroll>
 
@@ -55,8 +67,8 @@ export function TeamGrid() {
                 <h3 className="text-lg font-semibold mb-3">Behind the Vision</h3>
                 <p className="text-muted leading-relaxed">
                   Behind every project is an agile, founder-led collective. Our
-                  Head of Growth—a discipline we believe is inseparable from
-                  design—ensures every visual decision is anchored to a
+                  Head of Growth, a discipline we believe is inseparable from
+                  design, ensures every visual decision is anchored to a
                   measurable business outcome. We do not separate strategy from
                   execution, because the best design is always in service of
                   growth.
@@ -69,7 +81,7 @@ export function TeamGrid() {
                   developers is activated based on exactly what your project
                   demands. We are not a &ldquo;small business.&rdquo; We are a
                   high-performance creative collective with the expertise of a
-                  full-service agency and the speed of a startup—built
+                  full-service agency and the speed of a startup, built
                   specifically for founders who refuse to wait.
                 </p>
               </div>

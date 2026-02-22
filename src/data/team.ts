@@ -77,7 +77,7 @@ export const timeline: TimelineItem[] = [
     year: "2025",
     title: "Integrating Growth & Design",
     description:
-      "We expanded our core capabilities by integrating dedicated Growth Marketing. We realized that beautiful design is only half the equation—it needs to drive measurable business results and conversion.",
+      "We expanded our core capabilities by integrating dedicated Growth Marketing. We realized that beautiful design is only half the equation, it needs to drive measurable business results and conversion.",
   },
   {
     year: "2025",
@@ -141,16 +141,16 @@ export const values = [
   {
     title: "Complexity is a Communication Problem",
     description:
-      "The most transformative AI and SaaS products fail because they can't explain themselves clearly. Our job is to take the 'black box' of your technology and make it undeniably clear—to investors, clients, and users.",
+      "The most transformative AI and SaaS products fail because they can't explain themselves clearly. Our job is to take the 'black box' of your technology and make it undeniably clear, to investors, clients, and users.",
   },
   {
     title: "Speed is Non-Negotiable",
     description:
-      "Your market isn't waiting. We are structured to move at the pace of a startup—with defined processes that eliminate the slow back-and-forth of traditional agencies without sacrificing quality.",
+      "Your market isn't waiting. We are structured to move at the pace of a startup, with defined processes that eliminate the slow back-and-forth of traditional agencies without sacrificing quality.",
   },
   {
     title: "Consistency Signals Competence",
     description:
-      "A fragmented brand creates micro-moments of doubt in the minds of your buyers. A systematic visual language signals market leadership—telling the world that your company is ready to compete at the highest level.",
+      "A fragmented brand creates micro-moments of doubt in the minds of your buyers. A systematic visual language signals market leadership, telling the world that your company is ready to compete at the highest level.",
   },
 ];

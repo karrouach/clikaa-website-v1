@@ -21,7 +21,7 @@ export const projects: Project[] = [
       challenge:
         "Nova Financial had outgrown their legacy platform. Users were dropping off during onboarding, and the dated interface was undermining trust with institutional investors. They needed a complete digital overhaul that communicated security and sophistication without sacrificing usability.",
       approach:
-        "We started with a deep discovery phase — interviewing stakeholders, mapping user journeys, and auditing the competitive landscape. From there, we designed a modular system that scales across their product suite, with a focus on clarity, speed, and trust signals at every touchpoint.",
+        "We started with a deep discovery phase, interviewing stakeholders, mapping user journeys, and auditing the competitive landscape. From there, we designed a modular system that scales across their product suite, with a focus on clarity, speed, and trust signals at every touchpoint.",
       sections: [
         {
           title: "Brand Identity",
@@ -29,7 +29,7 @@ export const projects: Project[] = [
         },
         {
           title: "Platform Redesign",
-          body: "The new platform prioritizes progressive disclosure — surfacing the right information at the right time. We simplified the onboarding flow from 12 steps to 4, introduced contextual tooltips, and designed a dashboard that adapts to each user's role and activity patterns.",
+          body: "The new platform prioritizes progressive disclosure, surfacing the right information at the right time. We simplified the onboarding flow from 12 steps to 4, introduced contextual tooltips, and designed a dashboard that adapts to each user's role and activity patterns.",
         },
         {
           title: "Design System",
@@ -63,11 +63,11 @@ export const projects: Project[] = [
       challenge:
         "Artisan Studio's physical showrooms were renowned for their immersive experience, but their online presence told a different story. Their e-commerce site felt generic and failed to convey the craftsmanship behind each piece. They were losing high-intent buyers to competitors with stronger digital storytelling.",
       approach:
-        "We treated every product page like a gallery exhibit. Through close collaboration with their artisans, we developed a visual system that highlights materials, process, and provenance — turning browsers into buyers who understand the value behind every piece.",
+        "We treated every product page like a gallery exhibit. Through close collaboration with their artisans, we developed a visual system that highlights materials, process, and provenance, turning browsers into buyers who understand the value behind every piece.",
       sections: [
         {
           title: "Visual Storytelling",
-          body: "Each product is presented through a cinematic sequence — from raw material to finished piece. We art-directed new photography that captures texture, scale, and detail in ways that make you want to reach through the screen.",
+          body: "Each product is presented through a cinematic sequence, from raw material to finished piece. We art-directed new photography that captures texture, scale, and detail in ways that make you want to reach through the screen.",
         },
         {
           title: "E-commerce Experience",
