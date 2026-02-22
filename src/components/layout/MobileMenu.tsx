@@ -88,6 +88,25 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                       </Link>
                     </motion.li>
                   ))}
+                  <motion.li
+                    custom={NAVIGATION.length}
+                    variants={menuLinkSlide}
+                    initial="initial"
+                    animate="animate"
+                    exit="exit"
+                  >
+                    <Link
+                      href="/contact"
+                      className={cn(
+                        "block text-4xl font-semibold transition-colors",
+                        pathname === "/contact"
+                          ? "text-foreground"
+                          : "text-muted hover:text-foreground"
+                      )}
+                    >
+                      Contact
+                    </Link>
+                  </motion.li>
                 </ul>
               </nav>
 

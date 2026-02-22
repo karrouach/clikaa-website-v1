@@ -11,6 +11,7 @@ const clients = [
   { name: "Quantum", logo: "/partner-logos/Quantum.svg", href: "#" },
   { name: "Themar", logo: "/partner-logos/Themar-Logo.svg", href: "#" },
   { name: "Zapp", logo: "/partner-logos/Zapp.svg", href: "#" },
+  { name: "Xplor", logo: "/partner-logos/Xplor.svg", href: "#" },
 ];
 
 export function TrustedBy() {

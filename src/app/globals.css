@@ -20,6 +20,7 @@
 html {
   color-scheme: light;
   scroll-behavior: auto;
+  background-color: #111111;
 }
 
 html.lenis,

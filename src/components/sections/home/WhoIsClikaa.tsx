@@ -10,8 +10,8 @@ import { smoothEasing } from "@/lib/animations";
 
 const achievements = [
   { value: "41+", label: "Projects Delivered" },
-  { value: "$5M+", label: "Capital Raised by Clients" },
   { value: "12+", label: "Industries Served" },
+  { value: "$5M+", label: "Capital Raised by Clients" },
   { value: "3x", label: "Avg. Engagement Lift" },
 ];
 
@@ -27,7 +27,7 @@ export function WhoIsClikaa() {
               </span>
             </TextReveal>
             <TextReveal delay={0.1}>
-              <h2 className="mt-2 text-display-lg font-bold tracking-tight leading-[1.12]">
+              <h2 className="mt-2 text-[clamp(2.8rem,8vw,6rem)] font-bold tracking-tight leading-[1.12]">
                 Turning complexity into clear design.
               </h2>
             </TextReveal>

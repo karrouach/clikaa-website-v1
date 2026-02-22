@@ -74,7 +74,7 @@ A great product deserves a great presentation. If you are an ambitious founder g
 Ready to turn your vision into a deck that closes? [Book a Strategy Call with Clikaa today.](/contact)
     `,
     author: "Clikaa",
-    date: "2024-03-15",
+    date: "2024-04-25",
     category: "Strategy",
     tags: ["Pitch Decks"],
     thumbnail: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=500&fit=crop",
@@ -153,7 +153,7 @@ If you are generating traffic but losing out on demos, it's time to stop tweakin
 Ready to turn your website into your best salesperson? [Book a UX Strategy Call with Clikaa today.](/contact)
     `,
     author: "Clikaa",
-    date: "2024-03-22",
+    date: "2024-07-12",
     category: "Design",
     thumbnail: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&h=500&fit=crop",
     readTime: "7 min read",
@@ -221,7 +221,7 @@ Stop thinking about your logo and start thinking about your system.
 Is your brand ready for the next stage of growth? [Book a Brand Strategy Call with Clikaa today.](/contact)
     `,
     author: "Clikaa",
-    date: "2024-04-01",
+    date: "2024-10-08",
     category: "Strategy",
     thumbnail: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=500&fit=crop",
     readTime: "6 min read",
@@ -280,7 +280,7 @@ Don't let your complex ideas get lost in translation. Use motion to tell your st
 Is your product too complex for static images? [Book a Motion Strategy Call with Clikaa today.](/contact)
     `,
     author: "Clikaa",
-    date: "2024-04-10",
+    date: "2025-01-20",
     category: "Design",
     thumbnail: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&h=500&fit=crop",
     readTime: "6 min read",
@@ -337,7 +337,7 @@ Design is not a commodity; it is visual infrastructure. When you move away from 
 Ready to stop managing designers and start scaling your brand? [Explore Clikaa's Ongoing Support Plans today.](/contact)
     `,
     author: "Clikaa",
-    date: "2024-04-18",
+    date: "2025-06-14",
     category: "Strategy",
     thumbnail: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=500&fit=crop",
     readTime: "7 min read",
@@ -403,7 +403,7 @@ Great ad creative is a mix of art and behavioral science. If your ads aren't per
 Ready to lower your CPA with high-performance creative? [Book a Growth Design Call with Clikaa today.](/contact)
     `,
     author: "Clikaa",
-    date: "2024-04-25",
+    date: "2026-02-20",
     category: "Strategy",
     thumbnail: "https://images.unsplash.com/photo-1611926653458-09294b3142bf?w=800&h=500&fit=crop",
     readTime: "7 min read",

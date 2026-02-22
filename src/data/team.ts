@@ -134,23 +134,23 @@ export const testimonials: Testimonial[] = [
 
 export const values = [
   {
-    title: "Quality Over Quantity",
+    title: "Design is a Growth Lever",
     description:
-      "We take on fewer projects to ensure each one gets the attention it deserves. No shortcuts, no compromises.",
+      "Every design decision we make is tied to a business outcome. We don't create art; we build visual infrastructure that drives revenue, closes rounds, and builds the authority your next stage demands.",
   },
   {
-    title: "Human-Centered",
+    title: "Complexity is a Communication Problem",
     description:
-      "Every decision starts with understanding people. We design for humans first, algorithms second.",
+      "The most transformative AI and SaaS products fail because they can't explain themselves clearly. Our job is to take the 'black box' of your technology and make it undeniably clear—to investors, clients, and users.",
   },
   {
-    title: "Continuous Learning",
+    title: "Speed is Non-Negotiable",
     description:
-      "The digital landscape evolves constantly. We stay curious and embrace new technologies and methods.",
+      "Your market isn't waiting. We are structured to move at the pace of a startup—with defined processes that eliminate the slow back-and-forth of traditional agencies without sacrificing quality.",
   },
   {
-    title: "Transparent Partnership",
+    title: "Consistency Signals Competence",
     description:
-      "We believe in open communication and collaboration. Clients are partners in the creative process.",
+      "A fragmented brand creates micro-moments of doubt in the minds of your buyers. A systematic visual language signals market leadership—telling the world that your company is ready to compete at the highest level.",
   },
 ];

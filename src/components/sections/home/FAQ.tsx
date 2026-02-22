@@ -108,7 +108,7 @@ export function FAQ() {
               </span>
             </TextReveal>
             <TextReveal delay={0.1}>
-              <h2 className="mt-2 text-display-lg font-bold tracking-tight leading-tight">
+              <h2 className="mt-2 text-[clamp(2.8rem,8vw,6rem)] font-bold tracking-tight leading-tight">
                 Questions? Answers.
               </h2>
             </TextReveal>

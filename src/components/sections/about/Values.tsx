@@ -13,11 +13,11 @@ export function Values() {
         <div className="mb-16 text-center">
           <TextReveal>
             <span className="text-sm font-medium uppercase tracking-widest text-muted">
-              What We Believe
+              Our Philosophy
             </span>
           </TextReveal>
           <TextReveal delay={0.1}>
-            <h2 className="mt-2 text-display-md font-bold leading-tight">Our Values</h2>
+            <h2 className="mt-2 text-display-md font-bold leading-tight">Core Beliefs</h2>
           </TextReveal>
         </div>
 

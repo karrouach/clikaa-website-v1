@@ -12,7 +12,17 @@ export default function ContactPage() {
   return (
     <section className="section-padding">
       <Container>
-        <div className="grid gap-16 lg:grid-cols-2 lg:gap-24">
+        {/* Mobile: heading → form → email/socials */}
+        <div className="flex flex-col gap-12 lg:hidden">
+          <ContactInfo part="top" />
+          <div className="rounded-2xl border border-border bg-card p-8">
+            <ContactForm />
+          </div>
+          <ContactInfo part="bottom" />
+        </div>
+
+        {/* Desktop: side by side */}
+        <div className="hidden lg:grid gap-24 lg:grid-cols-2">
           <ContactInfo />
           <div className="rounded-2xl border border-border bg-card p-8 lg:p-12">
             <ContactForm />
