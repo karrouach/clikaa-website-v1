@@ -39,7 +39,7 @@ export function TeamGrid() {
               </p>
               <p>
                 My background sits at the intersection of technology and
-                storytelling. I understand the "black box" of AI, the complexity
+                storytelling. I understand the &ldquo;black box&rdquo; of AI, the complexity
                 of SaaS growth metrics, and the pressure of a fundraise. That
                 context is not something you can brief into a generalist
                 designer. It is built from years of working inside the
@@ -67,7 +67,7 @@ export function TeamGrid() {
                 <p className="text-muted leading-relaxed">
                   Our curated network of copywriters, motion designers, and web
                   developers is activated based on exactly what your project
-                  demands. We are not a "small business." We are a
+                  demands. We are not a &ldquo;small business.&rdquo; We are a
                   high-performance creative collective with the expertise of a
                   full-service agency and the speed of a startup—built
                   specifically for founders who refuse to wait.
