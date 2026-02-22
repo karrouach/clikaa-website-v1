@@ -27,7 +27,7 @@ export function WhoIsClikaa() {
               </span>
             </TextReveal>
             <TextReveal delay={0.1}>
-              <h2 className="mt-2 text-display-lg font-bold tracking-tight leading-[1.0]">
+              <h2 className="mt-2 text-display-lg font-bold tracking-tight leading-[1.12]">
                 Turning complexity into clear design.
               </h2>
             </TextReveal>

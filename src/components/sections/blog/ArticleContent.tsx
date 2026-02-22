@@ -84,7 +84,9 @@ export function ArticleContent({ post }: ArticleContentProps) {
 }
 
 function parseBold(text: string): string {
-  return text.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
+  return text
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="text-foreground font-semibold underline underline-offset-2 hover:opacity-70 transition-opacity">$1</a>')
+    .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
 }
 
 function formatContent(content: string): string {

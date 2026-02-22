@@ -11,8 +11,8 @@ export function AboutHero() {
       <Container>
         <div className="max-w-5xl">
           <TextReveal delay={0.2}>
-            <h1 className="text-display-lg font-bold leading-[1.05] tracking-tight">
-              <span className="block">Design for the Speed of</span>
+            <h1 className="text-[clamp(2rem,5.5vw,5.5rem)] font-bold leading-[1.05] tracking-tight">
+              Design for the Speed of{" "}
               <span className="text-gradient">Innovation.</span>
             </h1>
           </TextReveal>

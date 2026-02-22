@@ -15,7 +15,7 @@ export function VisionSection() {
         </TextReveal>
 
         <TextReveal delay={0.1}>
-          <p className="mt-4 text-[clamp(2.5rem,8vw,7.5rem)] font-bold leading-[1.05] max-w-5xl">
+          <p className="mt-4 text-[clamp(2.5rem,7vw,7rem)] font-bold leading-[1.05] max-w-5xl">
             We believe design is a growth lever, not just decoration.
           </p>
         </TextReveal>

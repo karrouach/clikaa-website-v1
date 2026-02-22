@@ -9,7 +9,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: `${SITE_CONFIG.name} - Digital Agency`,
+    default: `${SITE_CONFIG.name} – Your Dedicated Design Partner`,
     template: `%s | ${SITE_CONFIG.name}`,
   },
   description: SITE_CONFIG.description,
