@@ -71,15 +71,12 @@ export function Footer() {
               Contact
             </h3>
             <address className="not-italic">
-              <p className="text-white/80">{SITE_CONFIG.address}</p>
-              <p className="mt-4">
-                <a
-                  href={`mailto:${SITE_CONFIG.email}`}
-                  className="text-white/80 transition-colors hover:text-white"
-                >
-                  {SITE_CONFIG.email}
-                </a>
-              </p>
+              <a
+                href={`mailto:${SITE_CONFIG.email}`}
+                className="text-white/80 transition-colors hover:text-white"
+              >
+                {SITE_CONFIG.email}
+              </a>
             </address>
           </RevealOnScroll>
         </div>

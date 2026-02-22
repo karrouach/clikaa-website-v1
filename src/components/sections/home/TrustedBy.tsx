@@ -15,55 +15,55 @@ const clients = [
 
 export function TrustedBy() {
   return (
-    <section className="mt-12 md:mt-16 py-12 md:py-16 border-y border-border">
+    <section className="mt-12 md:mt-16 py-12 md:py-16 border-y border-border overflow-hidden">
       <Container>
         <RevealOnScroll className="mb-8 text-center">
           <p className="text-sm font-medium uppercase tracking-widest text-muted">
             Trusted by innovative teams and founders
           </p>
         </RevealOnScroll>
-
-        <div className="flex overflow-hidden">
-          <div className="flex shrink-0 items-center gap-12 md:gap-20 animate-marquee">
-            {[...clients, ...clients].map((client, index) => (
-              <a
-                key={`${client.name}-${index}`}
-                href={client.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="shrink-0 select-none"
-              >
-                <img
-                  src={client.logo}
-                  alt={client.name}
-                  className="h-7 md:h-9 w-auto object-contain brightness-0 opacity-30 hover:brightness-100 hover:opacity-100 transition-all duration-300"
-                />
-              </a>
-            ))}
-          </div>
-          <div
-            aria-hidden
-            className="flex shrink-0 items-center gap-12 md:gap-20 animate-marquee pl-20 md:pl-36"
-          >
-            {[...clients, ...clients].map((client, index) => (
-              <a
-                key={`${client.name}-dup-${index}`}
-                href={client.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                tabIndex={-1}
-                className="shrink-0 select-none"
-              >
-                <img
-                  src={client.logo}
-                  alt={client.name}
-                  className="h-7 md:h-9 w-auto object-contain brightness-0 opacity-30 hover:brightness-100 hover:opacity-100 transition-all duration-300"
-                />
-              </a>
-            ))}
-          </div>
-        </div>
       </Container>
+
+      <div className="flex">
+        <div className="flex shrink-0 items-center gap-12 md:gap-20 animate-marquee pl-6 md:pl-12">
+          {[...clients, ...clients].map((client, index) => (
+            <a
+              key={`${client.name}-${index}`}
+              href={client.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="shrink-0 select-none"
+            >
+              <img
+                src={client.logo}
+                alt={client.name}
+                className="h-7 md:h-9 w-auto object-contain brightness-0 opacity-30 hover:brightness-100 hover:opacity-100 transition-all duration-300"
+              />
+            </a>
+          ))}
+        </div>
+        <div
+          aria-hidden
+          className="flex shrink-0 items-center gap-12 md:gap-20 animate-marquee pl-20 md:pl-36"
+        >
+          {[...clients, ...clients].map((client, index) => (
+            <a
+              key={`${client.name}-dup-${index}`}
+              href={client.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              tabIndex={-1}
+              className="shrink-0 select-none"
+            >
+              <img
+                src={client.logo}
+                alt={client.name}
+                className="h-7 md:h-9 w-auto object-contain brightness-0 opacity-30 hover:brightness-100 hover:opacity-100 transition-all duration-300"
+              />
+            </a>
+          ))}
+        </div>
+      </div>
     </section>
   );
 }
