@@ -1,8 +1,7 @@
 "use client";
 
-import { ReactNode } from "react";
-import { motion, Variants } from "framer-motion";
-import { useInView } from "@/hooks/useInView";
+import { useRef, ReactNode } from "react";
+import { motion, useInView, Variants } from "framer-motion";
 import { useReducedMotion } from "@/hooks/useMediaQuery";
 import { smoothEasing } from "@/lib/animations";
 
@@ -49,10 +48,8 @@ export function RevealOnScroll({
   threshold = 0.1,
   once = true,
 }: RevealOnScrollProps) {
-  const [ref, isInView] = useInView<HTMLDivElement>({
-    threshold,
-    triggerOnce: once,
-  });
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once, amount: threshold });
   const reducedMotion = useReducedMotion();
 
   const variants = getVariants(direction);
@@ -67,11 +64,7 @@ export function RevealOnScroll({
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
       variants={variants}
-      transition={{
-        duration,
-        delay,
-        ease: smoothEasing,
-      }}
+      transition={{ duration, delay, ease: smoothEasing }}
       className={className}
     >
       {children}

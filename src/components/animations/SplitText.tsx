@@ -1,7 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { useInView } from "@/hooks/useInView";
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import { useReducedMotion } from "@/hooks/useMediaQuery";
 import { smoothEasing } from "@/lib/animations";
 import { cn } from "@/lib/utils";
@@ -25,10 +25,8 @@ export function SplitText({
   splitBy = "char",
   as: Component = "div",
 }: SplitTextProps) {
-  const [ref, isInView] = useInView<HTMLDivElement>({
-    threshold: 0.1,
-    triggerOnce: true,
-  });
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once: true, amount: 0.1 });
   const reducedMotion = useReducedMotion();
 
   const items = splitBy === "char" ? text.split("") : text.split(" ");

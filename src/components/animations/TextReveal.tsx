@@ -1,8 +1,7 @@
 "use client";
 
-import { ReactNode } from "react";
-import { motion } from "framer-motion";
-import { useInView } from "@/hooks/useInView";
+import { useRef, ReactNode } from "react";
+import { motion, useInView } from "framer-motion";
 import { useReducedMotion } from "@/hooks/useMediaQuery";
 import { smoothEasing } from "@/lib/animations";
 import { cn } from "@/lib/utils";
@@ -24,10 +23,8 @@ export function TextReveal({
   threshold = 0.1,
   as: Component = "div",
 }: TextRevealProps) {
-  const [ref, isInView] = useInView<HTMLDivElement>({
-    threshold,
-    triggerOnce: true,
-  });
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once: true, amount: threshold });
   const reducedMotion = useReducedMotion();
 
   if (reducedMotion) {
@@ -39,11 +36,7 @@ export function TextReveal({
       <motion.div
         initial={{ y: "100%" }}
         animate={isInView ? { y: 0 } : { y: "100%" }}
-        transition={{
-          duration,
-          delay,
-          ease: smoothEasing,
-        }}
+        transition={{ duration, delay, ease: smoothEasing }}
       >
         {Component === "div" || Component === "span" ? (
           children
@@ -70,10 +63,8 @@ export function TextRevealByLine({
   delay = 0,
   staggerDelay = 0.1,
 }: TextRevealByLineProps) {
-  const [ref, isInView] = useInView<HTMLDivElement>({
-    threshold: 0.1,
-    triggerOnce: true,
-  });
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once: true, amount: 0.1 });
   const reducedMotion = useReducedMotion();
   const lines = text.split("\n");
 

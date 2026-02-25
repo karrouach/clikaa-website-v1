@@ -1,8 +1,8 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import Image from "next/image";
-import { useInView } from "@/hooks/useInView";
 import { useReducedMotion } from "@/hooks/useMediaQuery";
 import { smoothEasing } from "@/lib/animations";
 import { cn } from "@/lib/utils";
@@ -34,10 +34,8 @@ export function ImageReveal({
   direction = "up",
   priority = false,
 }: ImageRevealProps) {
-  const [ref, isInView] = useInView<HTMLDivElement>({
-    threshold: 0.1,
-    triggerOnce: true,
-  });
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once: true, amount: 0.1 });
   const reducedMotion = useReducedMotion();
 
   const clipPaths = {
@@ -84,21 +82,13 @@ export function ImageReveal({
             ? { clipPath: clipPaths[direction].visible }
             : { clipPath: clipPaths[direction].hidden }
         }
-        transition={{
-          duration,
-          delay,
-          ease: smoothEasing,
-        }}
+        transition={{ duration, delay, ease: smoothEasing }}
         className="relative h-full w-full"
       >
         <motion.div
           initial={{ scale: 1.2 }}
           animate={isInView ? { scale: 1 } : { scale: 1.2 }}
-          transition={{
-            duration: duration * 1.5,
-            delay,
-            ease: smoothEasing,
-          }}
+          transition={{ duration: duration * 1.5, delay, ease: smoothEasing }}
           className="relative h-full w-full"
         >
           <Image

@@ -1,8 +1,7 @@
 "use client";
 
-import { ReactNode } from "react";
-import { motion, Variants } from "framer-motion";
-import { useInView } from "@/hooks/useInView";
+import { useRef, ReactNode } from "react";
+import { motion, useInView, Variants } from "framer-motion";
 import { useReducedMotion } from "@/hooks/useMediaQuery";
 
 interface StaggerContainerProps {
@@ -30,10 +29,8 @@ export function StaggerContainer({
   delayChildren = 0,
   threshold = 0.1,
 }: StaggerContainerProps) {
-  const [ref, isInView] = useInView<HTMLDivElement>({
-    threshold,
-    triggerOnce: true,
-  });
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once: true, amount: threshold });
   const reducedMotion = useReducedMotion();
 
   if (reducedMotion) {
