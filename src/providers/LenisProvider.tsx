@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useEffect, useRef, ReactNode } from "react";
+import { createContext, useContext, useEffect, useLayoutEffect, useRef, ReactNode } from "react";
 import { usePathname } from "next/navigation";
 import Lenis from "lenis";
 
@@ -49,12 +49,13 @@ export function LenisProvider({ children }: LenisProviderProps) {
     };
   }, []);
 
-  // Scroll to top on route change
-  useEffect(() => {
+  // Scroll to top on route change.
+  // useLayoutEffect runs before any child useEffect (including IntersectionObservers),
+  // ensuring scroll is at 0 before animation visibility is determined.
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
     if (lenisRef.current) {
       lenisRef.current.scrollTo(0, { immediate: true });
-    } else {
-      window.scrollTo(0, 0);
     }
   }, [pathname]);
 
