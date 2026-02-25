@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useEffect, useLayoutEffect, useRef, ReactNode } from "react";
+import { createContext, useContext, useLayoutEffect, useRef, ReactNode } from "react";
 import { usePathname } from "next/navigation";
 import Lenis from "lenis";
 
@@ -20,9 +20,20 @@ interface LenisProviderProps {
 
 export function LenisProvider({ children }: LenisProviderProps) {
   const lenisRef = useRef<Lenis | null>(null);
+  const rafRef = useRef<number>(0);
   const pathname = usePathname();
 
-  useEffect(() => {
+  useLayoutEffect(() => {
+    // Scroll to 0 synchronously before the browser paints the new page.
+    // This runs before any child useEffect (including IntersectionObservers).
+    window.scrollTo(0, 0);
+
+    // Tear down the previous Lenis instance so its RAF loop cannot animate
+    // the page back to the old scroll position (the root cause of blank pages).
+    cancelAnimationFrame(rafRef.current);
+    lenisRef.current?.destroy();
+
+    // Spin up a fresh Lenis that starts at scroll 0.
     const lenis = new Lenis({
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -38,25 +49,15 @@ export function LenisProvider({ children }: LenisProviderProps) {
 
     function raf(time: number) {
       lenis.raf(time);
-      requestAnimationFrame(raf);
+      rafRef.current = requestAnimationFrame(raf);
     }
-
-    requestAnimationFrame(raf);
+    rafRef.current = requestAnimationFrame(raf);
 
     return () => {
+      cancelAnimationFrame(rafRef.current);
       lenis.destroy();
       lenisRef.current = null;
     };
-  }, []);
-
-  // Scroll to top on route change.
-  // useLayoutEffect runs before any child useEffect (including IntersectionObservers),
-  // ensuring scroll is at 0 before animation visibility is determined.
-  useLayoutEffect(() => {
-    window.scrollTo(0, 0);
-    if (lenisRef.current) {
-      lenisRef.current.scrollTo(0, { immediate: true });
-    }
   }, [pathname]);
 
   return (
