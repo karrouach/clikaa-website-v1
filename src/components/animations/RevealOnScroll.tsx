@@ -14,7 +14,6 @@ interface RevealOnScrollProps {
   duration?: number;
   className?: string;
   threshold?: number;
-  once?: boolean;
 }
 
 const getVariants = (direction: Direction, distance: number = 50): Variants => {
@@ -46,10 +45,9 @@ export function RevealOnScroll({
   duration = 0.8,
   className = "",
   threshold = 0.1,
-  once = true,
 }: RevealOnScrollProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once, amount: threshold });
+  const isInView = useInView(ref, { once: false, amount: threshold });
   const reducedMotion = useReducedMotion();
 
   const variants = getVariants(direction);

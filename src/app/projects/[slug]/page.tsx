@@ -42,7 +42,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
   return (
     <>
-      <ProjectDetail project={project} />
+      <ProjectDetail key={project.slug} project={project} />
       <CTASection />
     </>
   );

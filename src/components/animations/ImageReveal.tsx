@@ -35,7 +35,7 @@ export function ImageReveal({
   priority = false,
 }: ImageRevealProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true, amount: 0.1 });
+  const isInView = useInView(ref, { once: false, amount: 0.1 });
   const reducedMotion = useReducedMotion();
 
   const clipPaths = {

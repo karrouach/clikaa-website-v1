@@ -24,7 +24,7 @@ export function TextReveal({
   as: Component = "div",
 }: TextRevealProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true, amount: threshold });
+  const isInView = useInView(ref, { once: false, amount: threshold });
   const reducedMotion = useReducedMotion();
 
   if (reducedMotion) {
