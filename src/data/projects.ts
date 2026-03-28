@@ -3,44 +3,40 @@ import { Project } from "@/types";
 export const projects: Project[] = [
   {
     id: "1",
-    slug: "nova-financial",
-    title: "Nova Financial",
+    slug: "korgi-consulting",
+    title: "Korgi Consulting",
     description:
-      "A complete digital transformation for a leading fintech company. We redesigned their entire platform, focusing on user experience and modern aesthetics while maintaining security standards.",
-    category: "Web Design",
-    client: "Nova Financial Inc.",
+      "A bold, tech-forward pitch deck that positions a global technology consultancy as the strategic transformation partner of choice.",
+    category: "Presentation Design",
+    client: "Korgi Consulting",
     year: "2024",
-    thumbnail: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
+    thumbnail: "/projects/korgi/hero.png",
     images: [
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=800&fit=crop",
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=800&fit=crop",
+      "/projects/korgi/hero.png",
+      "/projects/korgi/cover.png",
     ],
-    tags: ["UI/UX", "Development", "Branding"],
-    link: "https://novafinancial.com",
+    tags: ["Presentation Design", "Visual Storytelling", "Branding"],
+    link: "https://korgiconsulting.com",
     caseStudy: {
       challenge:
-        "Nova Financial had outgrown their legacy platform. Users were dropping off during onboarding, and the dated interface was undermining trust with institutional investors. They needed a complete digital overhaul that communicated security and sophistication without sacrificing usability.",
+        "Korgi Consulting had a clear value proposition -- but their existing materials weren't keeping pace with the calibre of clients they were pursuing. Competing for enterprise-level mandates means every touchpoint needs to communicate authority, clarity, and trust. They needed a pitch deck that could open boardroom doors and hold the room.",
       approach:
-        "We started with a deep discovery phase, interviewing stakeholders, mapping user journeys, and auditing the competitive landscape. From there, we designed a modular system that scales across their product suite, with a focus on clarity, speed, and trust signals at every touchpoint.",
+        "We started by mapping the full narrative arc of the deck -- from ethos and company overview through to service delivery and team expertise. Rather than designing slides in isolation, we built a cohesive visual system: a dark, tech-forward palette anchored in deep navy and teal, paired with bold typography and custom data visualisations that made complex service offerings immediately legible.\n\nEvery layout decision was deliberate. Information hierarchy was engineered so that a CFO scanning a slide and a CTO reading it line by line would both walk away with the same core message.",
       sections: [
         {
-          title: "Brand Identity",
-          body: "We redefined Nova's visual language from the ground up. A restrained color palette built on deep navy and warm neutrals conveys stability, while custom iconography and refined typography bring a modern edge. Every element was designed to reinforce credibility at a glance.",
+          title: "Visual Identity & Design System",
+          body: "The deck's visual language draws on Korgi's positioning as a technology-first consultancy. Futuristic imagery, topographic background textures, and a restrained teal accent colour work together to signal innovation without sacrificing professionalism. Custom iconography and a consistent grid system across all nine sections give the deck the feel of a branded product, not a templated document.",
         },
         {
-          title: "Platform Redesign",
-          body: "The new platform prioritizes progressive disclosure, surfacing the right information at the right time. We simplified the onboarding flow from 12 steps to 4, introduced contextual tooltips, and designed a dashboard that adapts to each user's role and activity patterns.",
-        },
-        {
-          title: "Design System",
-          body: "To ensure consistency at scale, we built a comprehensive design system with over 120 components. This gives Nova's internal team the tools to ship new features quickly without compromising on quality or brand coherence.",
+          title: "Narrative & Structure",
+          body: "We structured the deck around Korgi's five-stage methodology -- Advisory & Strategy, Concept & Technical Design, Procurement & Vendor Management, Delivery, and Optimisation -- giving prospects a clear picture of what working with Korgi actually looks like. The result is a deck that sells the process as much as the outcome.",
         },
       ],
       results: [
-        "68% faster onboarding",
-        "3.2x conversion increase",
-        "40% reduction in support tickets",
-        "$2.4M Series B raised post-launch",
+        "9-Slide Deck",
+        "5 Service Areas",
+        "1 Design System",
+        "Enterprise-Ready",
       ],
     },
   },
